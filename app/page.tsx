@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -20,9 +21,11 @@ export default function Home() {
         {/* BUTTONS */}
         <div className="flex flex-col sm:flex-row gap-5 justify-center">
 
+          <Link href="/explorer">
           <button className="px-9 py-3 bg-green-600 text-white rounded-2xl shadow-md hover:shadow-xl hover:bg-green-700 transition-all">
             Explorer
           </button>
+          </Link>
 
           <button className="px-9 py-3 bg-blue-600 text-white rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-700 transition-all">
             Test Yourself
