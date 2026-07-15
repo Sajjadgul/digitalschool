@@ -33,9 +33,17 @@ export default function Home() {
             </button>
           </Link>
 
-          <button onClick={() => { !session?.user && setOpen(true) }} className="px-9 py-3 bg-blue-600 text-white rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-700 transition-all">
-            Test Yourself
-          </button>
+          {session?.user ? (
+            <Link href="/test-yourself">
+              <button className="px-9 py-3 bg-blue-600 text-white rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-700 transition-all">
+                Test Yourself
+              </button>
+            </Link>
+          ) : (
+            <button onClick={() => setOpen(true)} className="px-9 py-3 bg-blue-600 text-white rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-700 transition-all">
+              Test Yourself
+            </button>
+          )}
 
           <button className="px-9 py-3 bg-purple-600 text-white rounded-2xl shadow-md hover:shadow-xl hover:bg-purple-700 transition-all">
             Result & Certificate
@@ -54,13 +62,13 @@ export default function Home() {
         </h2>
 
         <p className="text-gray-600 text-lg leading-relaxed mb-3">
-          We provide foundational lessons for <b>Urdu, Math, English
-            language, and Arabic language</b> to prepare learners for self-study and onward <b>knowledge</b> journey.
+          We provide foundational lessons for <b>Language (Urdu, English and Arabic) and Math </b>
+               to prepare learners for self-study and onward <b>knowledge</b> journey.
         </p>
 
         <p className="text-gray-600 text-lg leading-relaxed">
           This platform supports <b>Foundation,</b> PCTB, Cambridge system and Madrasa educational curriculum, giving
-          students a flexible and personalized choice learning experience.</p>
+          students a flexible and personalized choice of learning experience.</p>
       </div>
     </div>
   );

@@ -8,6 +8,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-urdu: var(--font-nastaliq-urdu);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -118,5 +119,18 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  
+  /* Apply Nastaliq font to Urdu/Arabic text */
+  *:lang(ur),
+  *[lang="ur"],
+  *[dir="rtl"] {
+    font-family: var(--font-nastaliq-urdu), var(--font-geist-sans), sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-urdu {
+    font-family: var(--font-nastaliq-urdu), var(--font-geist-sans), sans-serif;
   }
 }

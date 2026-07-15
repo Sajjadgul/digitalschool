@@ -73,8 +73,8 @@ export default function ArabicGrammarPage() {
         </Link>
         
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-800">Arabic Grammar Lessons (عربی میں صرف و نحو)</h1>
-          <h2 className="text-2xl font-semibold text-amber-700 mt-2">Quran Translation (قرآن ترجمہ)</h2>
+          <h1 className="text-3xl font-bold text-gray-800">Arabic Grammar Lessons <span className="font-urdu" dir="rtl">(عربی میں صرف و نحو)</span></h1>
+          <h2 className="text-2xl font-semibold text-amber-700 mt-2">Quran Translation <span className="font-urdu" dir="rtl">(قرآن ترجمہ)</span></h2>
         </div>
         
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -87,7 +87,7 @@ export default function ArabicGrammarPage() {
               className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:-translate-y-1"
             >
               <h3 className="text-lg font-medium text-gray-800">{lesson.title}</h3>
-              <p className="text-md font-medium text-gray-700 mb-2">{lesson.urduTitle}</p>
+              <p className="text-md font-medium text-gray-700 mb-2 font-urdu" dir="rtl">{lesson.urduTitle}</p>
               <p className="text-sm text-gray-500">Click to watch on YouTube</p>
             </Link>
           ))}

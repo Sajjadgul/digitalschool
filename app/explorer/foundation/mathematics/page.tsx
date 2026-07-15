@@ -72,7 +72,7 @@ export default function MathematicsPage() {
           Back to Foundation
         </Link>
         
-        <h1 className="mb-8 text-3xl font-bold text-gray-800">Mathematics Lessons (ریاضی)</h1>
+        <h1 className="mb-8 text-3xl font-bold text-gray-800">Mathematics Lessons <span className="font-urdu" dir="rtl">(ریاضی)</span></h1>
         
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {lessons.map((lesson) => (
@@ -84,7 +84,7 @@ export default function MathematicsPage() {
               className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:-translate-y-1"
             >
               <h3 className="text-lg font-medium text-gray-800">{lesson.title}</h3>
-              <p className="text-md font-medium text-gray-700 mb-2">{lesson.urduTitle}</p>
+              <p className="text-md font-medium text-gray-700 mb-2 font-urdu" dir="rtl">{lesson.urduTitle}</p>
               <p className="text-sm text-gray-500">Click to watch on YouTube</p>
             </Link>
           ))}
